@@ -1,48 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LoginPage from '../pages/LoginPage.vue'
-import UsersPage from '../pages/UsersPage.vue'
-// import FinesPage from '../pages/FinesPage.vue'
-// import BooksPage from '../pages/BooksPage.vue'
-// import NotificationsPage from '../pages/NotificationsPage.vue'
-// import SettingsPage from '../pages/SettingsPage.vue'
-// import ProfilePage from '../pages/ProfilePage.vue'
+// import Home from '../pages/Home.vue'
+// import About from '../pages/About.vue'
+import LoginPage from '../pages/LoginPage.vue' // Импортируем новый компонент
 
 const routes = [
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: Home
+  // },
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   component: About
+  // },
   {
     path: '/login',
     name: 'Login',
-    component: LoginPage
-  },
-  {
-    path: '/users',
-    name: 'Users',
-    component: UsersPage
+    component: LoginPage // Используем новое имя компонента
   }
-  // {
-  //   path: '/fines',
-  //   name: 'Fines',
-  //   component: FinesPage
-  // },
-  // {
-  //   path: '/books',
-  //   name: 'Books',
-  //   component: BooksPage
-  // },
-  // {
-  //   path: '/notifications',
-  //   name: 'Notifications',
-  //   component: NotificationsPage
-  // },
-  // {
-  //   path: '/settings',
-  //   name: 'Settings',
-  //   component: SettingsPage
-  // },
-  // {
-  //   path: '/profile',
-  //   name: 'Profile',
-  //   component: ProfilePage
-  // }
+  // Добавьте другие маршруты здесь
 ]
 
 const router = createRouter({
