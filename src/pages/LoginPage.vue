@@ -6,7 +6,7 @@
     class="flex h-screen items-center justify-center bg-cover bg-center"
   >
     <!-- Контейнер формы входа -->
-    <div class="h-[500px] w-[484px] rounded-[20px] bg-white px-[52px] pt-[40px]">
+    <div class="h-[510px] w-[484px] rounded-[20px] bg-white px-[52px] pt-[40px]">
       <!-- Заголовок страницы входа -->
       <div class="flex items-center justify-center">
         <h1 class="mb-[31px] text-[32px] font-bold">Вход в аккаунт</h1>
@@ -17,11 +17,12 @@
         <div class="flex flex-col">
           <label class="mb-[10px] text-[16px]" for="name">Имя пользователя</label>
           <input
-            v-model="username"
             class="mb-[22px] h-[49px] w-[380px] rounded-[15px] border border-black p-4"
             type="text"
             id="name"
             placeholder="Введите имя пользователя"
+            required
+            v-model="username"
           />
         </div>
         <!-- Поле ввода пароля -->
@@ -32,6 +33,7 @@
             class="mb-[22px] h-[49px] w-[380px] rounded-[15px] border border-black p-4"
             id="pswd"
             placeholder="Введите пароль"
+            required
             v-model="password"
           />
         </div>
@@ -55,13 +57,13 @@
         <!-- Кнопка отправки формы и сообщение об ошибке -->
         <div class="flex flex-col items-center">
           <button
-            class="h-[52px] w-[380px] rounded-[15px] bg-blue-600 text-[16px] font-bold text-white"
+            class="h-[52px] w-[380px] rounded-[15px] bg-blue-600 text-[16px] font-bold text-white hover:bg-blue-700"
             type="submit"
           >
             ВОЙТИ
           </button>
           <!-- Сообщение об ошибке отображается только если errorMessage установлено -->
-          <p v-if="errorMessage" class="mt-4 text-red-600">{{ errorMessage }}</p>
+          <p v-if="errorMessage" class="mt-4 text-center text-red-600">{{ errorMessage }}</p>
         </div>
       </form>
     </div>

@@ -1,6 +1,7 @@
 <!-- src/App.vue -->
 <template>
   <div id="app">
+    <h1></h1>
     <router-view></router-view>
   </div>
 </template>
